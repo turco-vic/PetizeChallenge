@@ -70,8 +70,8 @@ Construir uma aplicação React que busque o perfil de desenvolvedores na API p�
 - [x] `Header` — logo + barra de busca (visível na página de perfil)
 
 ### Fase 6 — Páginas
-- [ ] `Home.tsx` — busca centralizada, ao submeter navega para `/profile/:username`
-- [ ] `Profile.tsx` — monta Header, UserProfile, RepositorySort, lista de RepositoryCard + sentinel
+- [x] `Home.tsx` — busca centralizada, ao submeter navega para `/profile/:username`
+- [x] `Profile.tsx` — monta Header, UserProfile, RepositorySort, lista de RepositoryCard + sentinel
 
 ### Fase 7 — i18n
 - [ ] Substituir todas as strings hardcoded pelo hook `useTranslation()`
@@ -216,8 +216,8 @@ Build a React application that searches GitHub developer profiles via the public
 - [x] `Header` — logo + search bar (visible on profile page)
 
 ### Phase 6 — Pages
-- [ ] `Home.tsx` — centered search, on submit navigate to `/profile/:username`
-- [ ] `Profile.tsx` — assembles Header, UserProfile, RepositorySort, RepositoryCard list + sentinel
+- [x] `Home.tsx` — centered search, on submit navigate to `/profile/:username`
+- [x] `Profile.tsx` — assembles Header, UserProfile, RepositorySort, RepositoryCard list + sentinel
 
 ### Phase 7 — i18n
 - [ ] Replace all hardcoded strings with `useTranslation()` hook
