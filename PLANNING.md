@@ -50,9 +50,9 @@ Construir uma aplicação React que busque o perfil de desenvolvedores na API p�
 - [x] Limpar arquivos de boilerplate do Vite
 
 ### Fase 2 — Schemas Zod
-- [ ] `user.schema.ts` — modelar entidade User do GitHub
-- [ ] `repository.schema.ts` — modelar entidade Repository do GitHub
-- [ ] Exportar tipos TypeScript inferidos (`z.infer<typeof Schema>`)
+- [x] `user.schema.ts` — modelar entidade User do GitHub
+- [x] `repository.schema.ts` — modelar entidade Repository do GitHub
+- [x] Exportar tipos TypeScript inferidos (`z.infer<typeof Schema>`)
 
 ### Fase 3 — Camada de Serviço da API
 - [ ] `github.service.ts` — `getUser(username)` com validação Zod
@@ -196,9 +196,9 @@ Build a React application that searches GitHub developer profiles via the public
 - [x] Clean up Vite boilerplate files
 
 ### Phase 2 — Zod Schemas
-- [ ] `user.schema.ts` — model GitHub User entity
-- [ ] `repository.schema.ts` — model GitHub Repository entity
-- [ ] Export inferred TypeScript types (`z.infer<typeof Schema>`)
+- [x] `user.schema.ts` — model GitHub User entity
+- [x] `repository.schema.ts` — model GitHub Repository entity
+- [x] Export inferred TypeScript types (`z.infer<typeof Schema>`)
 
 ### Phase 3 — API Service Layer
 - [ ] `github.service.ts` — `getUser(username)` with Zod validation
