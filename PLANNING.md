@@ -44,10 +44,10 @@ Construir uma aplicação React que busque o perfil de desenvolvedores na API p�
 - [x] Criar projeto com Vite + React + TypeScript
 - [x] Publicar repositório público no GitHub
 - [x] Instalar todas as dependências (Chakra UI v2, React Router, Zod, i18next)
-- [ ] Configurar Chakra UI v2 + tema customizado (roxo `#7B2FBE`, azul `#4A90D9`)
-- [ ] Configurar React Router — rotas `/` e `/profile/:username`
-- [ ] Configurar i18next + arquivos de locale (`en.json` / `pt.json`)
-- [ ] Limpar arquivos de boilerplate do Vite
+- [x] Configurar Chakra UI v2 + tema customizado (roxo `#7B2FBE`, azul `#4A90D9`)
+- [x] Configurar React Router — rotas `/` e `/profile/:username`
+- [x] Configurar i18next + arquivos de locale (`en.json` / `pt.json`)
+- [x] Limpar arquivos de boilerplate do Vite
 
 ### Fase 2 — Schemas Zod
 - [ ] `user.schema.ts` — modelar entidade User do GitHub
@@ -190,10 +190,10 @@ Build a React application that searches GitHub developer profiles via the public
 - [x] Create project with Vite + React + TypeScript
 - [x] Publish public repository on GitHub
 - [x] Install all dependencies (Chakra UI v2, React Router, Zod, i18next)
-- [ ] Configure Chakra UI v2 + custom theme (purple `#7B2FBE`, blue `#4A90D9`)
-- [ ] Configure React Router — routes `/` and `/profile/:username`
-- [ ] Configure i18next + locale files (`en.json` / `pt.json`)
-- [ ] Clean up Vite boilerplate files
+- [x] Configure Chakra UI v2 + custom theme (purple `#7B2FBE`, blue `#4A90D9`)
+- [x] Configure React Router — routes `/` and `/profile/:username`
+- [x] Configure i18next + locale files (`en.json` / `pt.json`)
+- [x] Clean up Vite boilerplate files
 
 ### Phase 2 — Zod Schemas
 - [ ] `user.schema.ts` — model GitHub User entity
