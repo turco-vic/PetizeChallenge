@@ -1,0 +1,24 @@
+{
+  "search": {
+    "placeholder": "Pesquisar",
+    "button": "Buscar",
+    "notFound": "Nenhum usuário encontrado com esse nome."
+  },
+  "profile": {
+    "followers": "seguidores",
+    "following": "seguindo",
+    "contact": "Contato",
+    "twitter": "Twitter",
+    "sort": {
+      "label": "Ordenar por",
+      "updated": "Atualizado Recentemente",
+      "pushed": "Último Push",
+      "full_name": "Nome (A–Z)",
+      "created": "Mais Novo",
+      "stars": "Mais Estrelas"
+    }
+  },
+  "repo": {
+    "updatedAt": "Atualizado"
+  }
+}
