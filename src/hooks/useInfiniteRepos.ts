@@ -21,7 +21,6 @@ export function useInfiniteRepos(
   const [hasMore, setHasMore] = useState(true);
   const observerRef = useRef<IntersectionObserver | null>(null);
 
-  // Reset when username or sort changes
   useEffect(() => {
     setRepos([]);
     setPage(1);
@@ -29,22 +28,25 @@ export function useInfiniteRepos(
     setError(null);
   }, [username, sort]);
 
-  // Fetch repos when page changes
   useEffect(() => {
-    if (!username || !hasMore) return;
+    if (!username) return;
+    if (sort !== "stargazers" && !hasMore) return;
 
     setIsLoading(true);
 
     getRepositories(username, page, sort)
       .then((newRepos) => {
         setRepos((prev) => (page === 1 ? newRepos : [...prev, ...newRepos]));
-        setHasMore(newRepos.length === 10);
+        if (sort === "stargazers") {
+          setHasMore(false);
+        } else {
+          setHasMore(newRepos.length === 10);
+        }
       })
       .catch(() => setError("Failed to load repositories."))
       .finally(() => setIsLoading(false));
   }, [username, page, sort]);
 
-  // IntersectionObserver sentinel
   const sentinelRef = useCallback(
     (node: HTMLDivElement | null) => {
       if (isLoading) return;

@@ -5,7 +5,6 @@ import {
   HStack,
   VStack,
   Button,
-  Link,
   Divider,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
@@ -17,6 +16,11 @@ interface UserProfileProps {
 
 export default function UserProfile({ user }: UserProfileProps) {
   const { t } = useTranslation();
+
+  const openUrl = (url: string) => {
+    const fullUrl = url.startsWith("http") ? url : `https://${url}`;
+    window.open(fullUrl, "_blank");
+  };
 
   return (
     <Box w={{ base: "100%", md: "260px" }} flexShrink={0}>
@@ -55,18 +59,24 @@ export default function UserProfile({ user }: UserProfileProps) {
           {user.location && <Text>📍 {user.location}</Text>}
           {user.email && <Text>✉️ {user.email}</Text>}
           {user.blog && (
-            <Link href={user.blog} isExternal color="brand.blue">
+            <Text
+              cursor="pointer"
+              color="brand.blue"
+              onClick={() => openUrl(user.blog!)}
+              _hover={{ textDecoration: "underline" }}
+            >
               🔗 {user.blog}
-            </Link>
+            </Text>
           )}
           {user.twitter_username && (
-            <Link
-              href={`https://twitter.com/${user.twitter_username}`}
-              isExternal
+            <Text
+              cursor="pointer"
               color="brand.blue"
+              onClick={() => openUrl(`https://twitter.com/${user.twitter_username}`)}
+              _hover={{ textDecoration: "underline" }}
             >
               🐦 @{user.twitter_username}
-            </Link>
+            </Text>
           )}
         </VStack>
 
@@ -74,13 +84,11 @@ export default function UserProfile({ user }: UserProfileProps) {
 
         {user.blog && (
           <Button
-            as={Link}
-            href={user.blog}
-            isExternal
             w="100%"
             bg="brand.purple"
             color="white"
-            _hover={{ bg: "#6a28a8", textDecoration: "none" }}
+            _hover={{ bg: "#6a28a8" }}
+            onClick={() => openUrl(user.blog!)}
           >
             {t("profile.contact")}
           </Button>
@@ -88,14 +96,12 @@ export default function UserProfile({ user }: UserProfileProps) {
 
         {user.twitter_username && (
           <Button
-            as={Link}
-            href={`https://twitter.com/${user.twitter_username}`}
-            isExternal
             w="100%"
             variant="outline"
             borderColor="brand.purple"
             color="brand.purple"
-            _hover={{ bg: "purple.50", textDecoration: "none" }}
+            _hover={{ bg: "purple.50" }}
+            onClick={() => openUrl(`https://twitter.com/${user.twitter_username}`)}
           >
             {t("profile.twitter")}
           </Button>
