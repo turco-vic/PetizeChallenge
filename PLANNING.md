@@ -55,9 +55,9 @@ Construir uma aplicação React que busque o perfil de desenvolvedores na API p�
 - [x] Exportar tipos TypeScript inferidos (`z.infer<typeof Schema>`)
 
 ### Fase 3 — Camada de Serviço da API
-- [ ] `github.service.ts` — `getUser(username)` com validação Zod
-- [ ] `github.service.ts` — `getRepositories(username, page, sort)` com validação Zod
-- [ ] Todas as respostas da API validadas na camada de serviço, não nos componentes
+- [x] `github.service.ts` — `getUser(username)` com validação Zod
+- [x] `github.service.ts` — `getRepositories(username, page, sort)` com validação Zod
+- [x] Todas as respostas da API validadas na camada de serviço, não nos componentes
 
 ### Fase 4 — Custom Hooks
 - [ ] `useGitHubUser(username)` — busca o usuário, expõe `{ data, isLoading, error }`
@@ -201,9 +201,9 @@ Build a React application that searches GitHub developer profiles via the public
 - [x] Export inferred TypeScript types (`z.infer<typeof Schema>`)
 
 ### Phase 3 — API Service Layer
-- [ ] `github.service.ts` — `getUser(username)` with Zod validation
-- [ ] `github.service.ts` — `getRepositories(username, page, sort)` with Zod validation
-- [ ] All API responses validated at the service boundary, not in components
+- [x] `github.service.ts` — `getUser(username)` with Zod validation
+- [x] `github.service.ts` — `getRepositories(username, page, sort)` with Zod validation
+- [x] All API responses validated at the service boundary, not in components
 
 ### Phase 4 — Custom Hooks
 - [ ] `useGitHubUser(username)` — fetch user, expose `{ data, isLoading, error }`
