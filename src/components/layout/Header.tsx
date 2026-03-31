@@ -5,7 +5,9 @@ import {
   Button,
   InputGroup,
   InputLeftElement,
+  Text,
 } from "@chakra-ui/react";
+import { SearchIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -26,29 +28,22 @@ export default function Header() {
   };
 
   return (
-    <Box
-      px={8}
-      py={4}
-      borderBottom="1px solid"
-      borderColor="gray.200"
-      bg="white"
-    >
+    <Box px={8} py={4} bg="white">
       <HStack justify="space-between">
-        <Box
-          fontWeight="bold"
+        <Text
           fontSize="xl"
-          bgGradient="linear(to-r, brand.blue, brand.purple)"
-          bgClip="text"
+          fontWeight="normal"
           cursor="pointer"
           onClick={() => navigate("/")}
         >
-          Search d_evs
-        </Box>
+          <Box as="span" color="brand.blue">Search </Box>
+          <Box as="span" color="brand.purple">d_evs</Box>
+        </Text>
 
-        <HStack>
+        <HStack spacing={3}>
           <InputGroup size="md" w="300px">
-            <InputLeftElement pointerEvents="none" color="gray.400">
-              🔍
+            <InputLeftElement pointerEvents="none">
+              <SearchIcon color="gray.400" />
             </InputLeftElement>
             <Input
               value={search}
@@ -57,13 +52,18 @@ export default function Header() {
               placeholder={t("search.placeholder")}
               focusBorderColor="brand.purple"
               borderRadius="md"
+              fontWeight="normal"
             />
           </InputGroup>
           <Button
             onClick={handleSearch}
             bg="brand.purple"
             color="white"
+            size="md"
+            px={8}
+            fontWeight="normal"
             _hover={{ bg: "#6a28a8" }}
+            borderRadius="md"
           >
             {t("search.button")}
           </Button>

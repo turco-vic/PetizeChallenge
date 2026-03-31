@@ -5,7 +5,9 @@ import {
   InputGroup,
   InputLeftElement,
   Text,
+  HStack,
 } from "@chakra-ui/react";
+import { SearchIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -32,52 +34,43 @@ export default function Home() {
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      gap={8}
+      gap={6}
       px={4}
     >
-      <Text
-        fontSize="4xl"
-        fontWeight="bold"
-        bgGradient="linear(to-r, brand.blue, brand.purple)"
-        bgClip="text"
-        border="2px solid"
-        borderColor="gray.200"
-        px={8}
-        py={4}
-      >
-        Search d_evs
+      <Text fontSize="5xl" fontWeight="normal">
+        <Box as="span" color="brand.blue">Search </Box>
+        <Box as="span" color="brand.purple">d_evs</Box>
       </Text>
 
-      <InputGroup size="lg" maxW="500px" w="100%">
-        <InputLeftElement pointerEvents="none" color="gray.400">
-          🔍
-        </InputLeftElement>
-        <Input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          onKeyDown={handleKeyDown}
-          placeholder={t("search.placeholder")}
-          focusBorderColor="brand.purple"
-          borderRadius="md"
-          pr="110px"
-        />
+      <HStack maxW="500px" w="100%" spacing={3}>
+        <InputGroup size="md" flex={1}>
+          <InputLeftElement pointerEvents="none">
+            <SearchIcon color="gray.400" />
+          </InputLeftElement>
+          <Input
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder={t("search.placeholder")}
+            focusBorderColor="brand.purple"
+            borderRadius="md"
+            fontWeight="normal"
+          />
+        </InputGroup>
+
         <Button
           onClick={handleSearch}
           bg="brand.purple"
           color="white"
+          size="md"
+          px={10}
+          fontWeight="normal"
           _hover={{ bg: "#6a28a8" }}
-          position="absolute"
-          right={0}
-          top={0}
-          h="100%"
-          borderLeftRadius={0}
-          borderRightRadius="md"
-          px={6}
-          zIndex={1}
+          borderRadius="md"
         >
           {t("search.button")}
         </Button>
-      </InputGroup>
+      </HStack>
     </Box>
   );
 }

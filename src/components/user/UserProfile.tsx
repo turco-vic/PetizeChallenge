@@ -1,112 +1,153 @@
 import {
-  Box,
-  Avatar,
-  Text,
-  HStack,
-  VStack,
-  Button,
-  Divider,
+    Box,
+    Avatar,
+    Text,
+    HStack,
+    VStack,
+    Button,
+    Divider,
+    Icon,
 } from "@chakra-ui/react";
+import {
+    EmailIcon,
+    LinkIcon,
+} from "@chakra-ui/icons";
+import { FaTwitter, FaBuilding, FaMapMarkerAlt, FaUsers, FaUserFriends } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import type { User } from "../../types";
 
 interface UserProfileProps {
-  user: User;
+    user: User;
 }
 
 export default function UserProfile({ user }: UserProfileProps) {
-  const { t } = useTranslation();
+    const { t } = useTranslation();
 
-  const openUrl = (url: string) => {
-    const fullUrl = url.startsWith("http") ? url : `https://${url}`;
-    window.open(fullUrl, "_blank");
-  };
+    const openUrl = (url: string) => {
+        const fullUrl = url.startsWith("http") ? url : `https://${url}`;
+        window.open(fullUrl, "_blank");
+    };
 
-  return (
-    <Box w={{ base: "100%", md: "260px" }} flexShrink={0}>
-      <VStack align="start" spacing={3}>
-        <HStack spacing={3}>
-          <Avatar src={user.avatar_url} name={user.name ?? user.login} size="lg" />
-          <Box>
-            <Text fontWeight="bold" fontSize="lg">
-              {user.name ?? user.login}
-            </Text>
-            <Text color="gray.500" fontSize="sm">
-              @{user.login}
-            </Text>
-          </Box>
-        </HStack>
+    return (
+        <Box w={{ base: "100%", md: "220px" }} flexShrink={0}>
+            <VStack align="start" spacing={3}>
 
-        {user.bio && (
-          <Text fontSize="sm" color="gray.600">
-            {user.bio}
-          </Text>
-        )}
+                {/* Avatar + Name */}
+                <HStack spacing={3} align="center">
+                    <Avatar
+                        src={user.avatar_url}
+                        name={user.name ?? user.login}
+                        size="md"
+                        borderRadius="md"
+                    />
+                    <Box>
+                        <Text fontWeight="bold" fontSize="md" color="gray.800">
+                            {user.name ?? user.login}
+                        </Text>
+                        <Text color="gray.400" fontSize="sm">
+                            @{user.login}
+                        </Text>
+                    </Box>
+                </HStack>
 
-        <Divider />
+                {/* Bio */}
+                {user.bio && (
+                    <Text fontSize="sm" color="gray.600" lineHeight="1.5">
+                        {user.bio}
+                    </Text>
+                )}
 
-        <HStack spacing={4} fontSize="sm">
-          <Text>
-            <strong>{user.followers}</strong> {t("profile.followers")}
-          </Text>
-          <Text>
-            <strong>{user.following}</strong> {t("profile.following")}
-          </Text>
-        </HStack>
+                {/* Followers / Following */}
+                <VStack align="start" spacing={3} fontSize="sm" color="gray.600">
+                    <HStack spacing={1}>
+                        <Icon as={FaUsers} color="gray.500" boxSize={3.5} />
+                        <Text><strong>{user.followers}</strong> {t("profile.followers")}</Text>
+                    </HStack>
+                    <HStack spacing={1}>
+                        <Icon as={FaUserFriends} color="gray.500" boxSize={3.5} />
+                        <Text><strong>{user.following}</strong> {t("profile.following")}</Text>
+                    </HStack>
+                </VStack>
 
-        <VStack align="start" spacing={1} fontSize="sm" color="gray.600">
-          {user.company && <Text>🏢 {user.company}</Text>}
-          {user.location && <Text>📍 {user.location}</Text>}
-          {user.email && <Text>✉️ {user.email}</Text>}
-          {user.blog && (
-            <Text
-              cursor="pointer"
-              color="brand.blue"
-              onClick={() => openUrl(user.blog!)}
-              _hover={{ textDecoration: "underline" }}
-            >
-              🔗 {user.blog}
-            </Text>
-          )}
-          {user.twitter_username && (
-            <Text
-              cursor="pointer"
-              color="brand.blue"
-              onClick={() => openUrl(`https://twitter.com/${user.twitter_username}`)}
-              _hover={{ textDecoration: "underline" }}
-            >
-              🐦 @{user.twitter_username}
-            </Text>
-          )}
-        </VStack>
+                <Divider />
 
-        <Divider />
+                {/* Info */}
+                <VStack align="start" spacing={3} fontSize="sm" color="gray.600">
+                    {user.company && (
+                        <HStack spacing={2}>
+                            <Icon as={FaBuilding} color="gray.500" boxSize={3.5} />
+                            <Text>{user.company}</Text>
+                        </HStack>
+                    )}
+                    {user.location && (
+                        <HStack spacing={2}>
+                            <Icon as={FaMapMarkerAlt} color="gray.500" boxSize={3.5} />
+                            <Text>{user.location}</Text>
+                        </HStack>
+                    )}
+                    {user.email && (
+                        <HStack spacing={2}>
+                            <EmailIcon color="gray.500" boxSize={3.5} />
+                            <Text>{user.email}</Text>
+                        </HStack>
+                    )}
+                    {user.blog && (
+                        <HStack
+                            spacing={2}
+                            cursor="pointer"
+                            onClick={() => openUrl(user.blog!)}
+                            _hover={{ color: "brand.blue" }}
+                        >
+                            <LinkIcon color="gray.500" boxSize={3.5} />
+                            <Text color="gray.600">{user.blog}</Text>
+                        </HStack>
+                    )}
+                    {user.twitter_username && (
+                        <HStack
+                            spacing={2}
+                            cursor="pointer"
+                            onClick={() => openUrl(`https://twitter.com/${user.twitter_username}`)}
+                            _hover={{ color: "brand.blue" }}
+                        >
+                            <Icon as={FaTwitter} color="gray.500" boxSize={3.5} />
+                            <Text color="gray.600">@{user.twitter_username}</Text>
+                        </HStack>
+                    )}
+                </VStack>
 
-        {user.blog && (
-          <Button
-            w="100%"
-            bg="brand.purple"
-            color="white"
-            _hover={{ bg: "#6a28a8" }}
-            onClick={() => openUrl(user.blog!)}
-          >
-            {t("profile.contact")}
-          </Button>
-        )}
+                <Divider />
 
-        {user.twitter_username && (
-          <Button
-            w="100%"
-            variant="outline"
-            borderColor="brand.purple"
-            color="brand.purple"
-            _hover={{ bg: "purple.50" }}
-            onClick={() => openUrl(`https://twitter.com/${user.twitter_username}`)}
-          >
-            {t("profile.twitter")}
-          </Button>
-        )}
-      </VStack>
-    </Box>
-  );
+                {/* Buttons */}
+                {user.blog && (
+                    <Button
+                        w="100%"
+                        bg="brand.purple"
+                        color="white"
+                        borderRadius="md"
+                        fontSize="sm"
+                        _hover={{ bg: "#6a28a8" }}
+                        onClick={() => openUrl(user.blog!)}
+                    >
+                        {t("profile.contact")}
+                    </Button>
+                )}
+
+                {user.twitter_username && (
+                    <Button
+                        w="100%"
+                        variant="outline"
+                        borderColor="gray.500"
+                        color="gray.600"
+                        borderRadius="md"
+                        fontSize="sm"
+                        leftIcon={<Icon as={FaTwitter} color="gray.400" />}
+                        _hover={{ bg: "gray.50" }}
+                        onClick={() => openUrl(`https://twitter.com/${user.twitter_username}`)}
+                    >
+                        {t("profile.twitter")}
+                    </Button>
+                )}
+            </VStack>
+        </Box>
+    );
 }

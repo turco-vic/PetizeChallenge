@@ -1,11 +1,10 @@
 import {
   Box,
   Text,
-  Link,
   HStack,
-  Icon,
   Divider,
 } from "@chakra-ui/react";
+import { StarIcon, TimeIcon } from "@chakra-ui/icons";
 import { useTranslation } from "react-i18next";
 import type { Repository } from "../../types";
 
@@ -22,33 +21,37 @@ export default function RepositoryCard({ repository }: RepositoryCardProps) {
 
   return (
     <Box py={4}>
-      <Link
+      <Text
+        as="a"
         href={repository.html_url}
-        isExternal
+        target="_blank"
+        rel="noopener noreferrer"
         fontWeight="bold"
-        fontSize="lg"
+        fontSize="md"
         color="gray.800"
+        cursor="pointer"
         _hover={{ color: "brand.purple" }}
       >
         {repository.name}
-      </Link>
+      </Text>
 
       {repository.description && (
-        <Text mt={1} color="gray.600" fontSize="sm">
+        <Text mt={1} color="gray.500" fontSize="sm">
           {repository.description}
         </Text>
       )}
 
       <HStack mt={2} spacing={4} color="gray.500" fontSize="sm">
         <HStack spacing={1}>
-          <Text>⭐</Text>
+          <StarIcon color="gray.500" boxSize={3} />
           <Text>{repository.stargazers_count}</Text>
         </HStack>
 
         {formattedDate && (
-          <Text>
-            {t("repo.updatedAt")} {formattedDate}
-          </Text>
+          <HStack spacing={1}>
+            <TimeIcon color="gray.500" boxSize={3} />
+            <Text>{t("repo.updatedAt")} {formattedDate}</Text>
+          </HStack>
         )}
 
         {repository.language && (
