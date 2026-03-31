@@ -60,8 +60,8 @@ Construir uma aplicação React que busque o perfil de desenvolvedores na API p�
 - [x] Todas as respostas da API validadas na camada de serviço, não nos componentes
 
 ### Fase 4 — Custom Hooks
-- [ ] `useGitHubUser(username)` — busca o usuário, expõe `{ data, isLoading, error }`
-- [ ] `useInfiniteRepos(username, sort)` — paginação com IntersectionObserver sentinel
+- [x] `useGitHubUser(username)` — busca o usuário, expõe `{ data, isLoading, error }`
+- [x] `useInfiniteRepos(username, sort)` — paginação com IntersectionObserver sentinel
 
 ### Fase 5 — Componentes
 - [ ] `RepositoryCard` — exibe um repositório (nome como link, estrelas, data de atualização)
