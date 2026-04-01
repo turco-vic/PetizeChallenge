@@ -6,6 +6,18 @@ Desenvolvido como parte do **Desafio Técnico de Estágio React — Petize Q2 20
 
 ---
 
+## Planejamento
+
+Este projeto foi desenvolvido seguindo um planejamento detalhado documentado em [`PLANNING.md`](./PLANNING.md), contendo:
+
+- Checklist completo de todas as histórias e requisitos técnicos
+- Roteiro de implementação em 8 fases
+- Decisões de design para os gaps propositais do desafio
+- Estratégia de scroll infinito documentada
+- Convenção de commits seguida durante o desenvolvimento
+
+---
+
 ## Tecnologias
 
 | Categoria | Tecnologia |
@@ -52,10 +64,9 @@ Desenvolvido como parte do **Desafio Técnico de Estágio React — Petize Q2 20
 - npm v9+
 
 ### Instalação
-
 ```bash
 # Clone o repositório
-git clone https://github.com/your-username/PetizeChallenge.git
+git clone https://github.com/turco-vic/PetizeChallenge.git
 
 # Entre na pasta do projeto
 cd PetizeChallenge
@@ -65,7 +76,6 @@ npm install
 ```
 
 ### Rodando localmente
-
 ```bash
 npm run dev
 ```
@@ -73,7 +83,6 @@ npm run dev
 Acesse [http://localhost:5173](http://localhost:5173) no navegador.
 
 ### Build de produção
-
 ```bash
 npm run build
 ```
@@ -81,7 +90,6 @@ npm run build
 ---
 
 ## Estrutura do Projeto
-
 ```
 src/
 ├── components/        # Componentes reutilizáveis
@@ -112,6 +120,18 @@ src/
 A React application for searching GitHub developer profiles and browsing their repositories with infinite scroll.
 
 Built as part of the **Petize React Internship Challenge — Q2 2026**.
+
+---
+
+## Planning
+
+This project was developed following a detailed plan documented in [`PLANNING.md`](./PLANNING.md), containing:
+
+- Full checklist of all user stories and technical requirements
+- 8-phase implementation roadmap
+- Design decisions for the intentional gaps in the challenge
+- Documented infinite scroll strategy
+- Commit convention followed throughout development
 
 ---
 
@@ -161,10 +181,9 @@ Built as part of the **Petize React Internship Challenge — Q2 2026**.
 - npm v9+
 
 ### Installation
-
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/PetizeChallenge.git
+git clone https://github.com/turco-vic/PetizeChallenge.git
 
 # Navigate into the project
 cd PetizeChallenge
@@ -174,7 +193,6 @@ npm install
 ```
 
 ### Running locally
-
 ```bash
 npm run dev
 ```
@@ -182,7 +200,6 @@ npm run dev
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ### Build for production
-
 ```bash
 npm run build
 ```
@@ -190,7 +207,6 @@ npm run build
 ---
 
 ## Project Structure
-
 ```
 src/
 ├── components/        # Reusable UI components
@@ -211,3 +227,8 @@ src/
 ## Live Demo
 
 [View on Vercel](https://eturcodev-petize-challenge.vercel.app/)
+```
+
+Salva e commita:
+```
+docs: add planning section to README
