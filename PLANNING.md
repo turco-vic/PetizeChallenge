@@ -78,11 +78,11 @@ Construir uma aplicação React que busque o perfil de desenvolvedores na API p�
 - [x] Testar alternância PT → EN
 
 ### Fase 8 — Polimento e Deploy
-- [ ] Tratar todos os estados de UI: loading, erro, vazio, usuário não encontrado
-- [ ] Revisão de responsividade mobile
-- [ ] Auditar histórico de commits — garantir commits convencionais em todo o projeto
-- [ ] Deploy na Vercel
-- [ ] Atualizar README com link da demo
+- [x] Tratar todos os estados de UI: loading, erro, vazio, usuário não encontrado
+- [x] Revisão de responsividade mobile
+- [x] Auditar histórico de commits — garantir commits convencionais em todo o projeto
+- [x] Deploy na Vercel
+- [x] Atualizar README com link da demo
 
 ---
 
@@ -224,11 +224,11 @@ Build a React application that searches GitHub developer profiles via the public
 - [x] Test PT → EN switching
 
 ### Phase 8 — Polish & Deploy
-- [ ] Handle all UI states: loading, error, empty, user not found
-- [ ] Mobile responsiveness review
-- [ ] Audit commit history — ensure conventional commits throughout
-- [ ] Deploy to Vercel
-- [ ] Update README with live demo link
+- [x] Handle all UI states: loading, error, empty, user not found
+- [x] Mobile responsiveness review
+- [x] Audit commit history — ensure conventional commits throughout
+- [x] Deploy to Vercel
+- [x] Update README with live demo link
 
 ---
 
