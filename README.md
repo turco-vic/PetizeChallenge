@@ -4,6 +4,10 @@ Aplicação React para busca de perfis de desenvolvedores no GitHub, com listage
 
 Desenvolvido como parte do **Desafio Técnico de Estágio React — Petize Q2 2026**.
 
+## Demo
+
+[Ver no Vercel](https://eturcodev-petize-challenge.vercel.app/)
+
 ---
 
 ## Planejamento
@@ -107,12 +111,6 @@ src/
 
 ---
 
-## Demo
-
-[Ver no Vercel](https://eturcodev-petize-challenge.vercel.app/)
-
----
-
 ---
 
 # PetizeChallenge — Search d_evs
@@ -120,6 +118,10 @@ src/
 A React application for searching GitHub developer profiles and browsing their repositories with infinite scroll.
 
 Built as part of the **Petize React Internship Challenge — Q2 2026**.
+
+## Demo
+
+[View on Vercel](https://eturcodev-petize-challenge.vercel.app/)
 
 ---
 
@@ -221,14 +223,4 @@ src/
 ├── theme/             # Chakra UI custom theme
 └── types/             # TypeScript types inferred from Zod schemas
 ```
-
----
-
-## Live Demo
-
-[View on Vercel](https://eturcodev-petize-challenge.vercel.app/)
 ```
-
-Salva e commita:
-```
-docs: add planning section to README
