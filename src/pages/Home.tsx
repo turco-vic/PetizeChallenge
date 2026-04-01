@@ -35,14 +35,19 @@ export default function Home() {
       alignItems="center"
       justifyContent="center"
       gap={6}
-      px={4}
+      px={{ base: 4, md: 8 }}
     >
-      <Text fontSize="5xl" fontWeight="normal">
+      <Text
+        fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
+        fontWeight="normal"
+        textAlign="center"
+        whiteSpace="nowrap"
+      >
         <Box as="span" color="brand.blue">Search </Box>
         <Box as="span" color="brand.purple">d_evs</Box>
       </Text>
 
-      <HStack maxW="500px" w="100%" spacing={3}>
+      <HStack maxW="500px" w="100%" spacing={2}>
         <InputGroup size="md" flex={1}>
           <InputLeftElement pointerEvents="none">
             <SearchIcon color="gray.400" />
@@ -63,10 +68,11 @@ export default function Home() {
           bg="brand.purple"
           color="white"
           size="md"
-          px={10}
+          px={{ base: 4, md: 10 }}
           fontWeight="normal"
           _hover={{ bg: "#6a28a8" }}
           borderRadius="md"
+          flexShrink={0}
         >
           {t("search.button")}
         </Button>
