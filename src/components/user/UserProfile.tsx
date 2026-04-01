@@ -65,11 +65,11 @@ export default function UserProfile({ user }: UserProfileProps) {
         <VStack align="start" spacing={2} pt={1} fontSize="sm" color="gray.600">
           <HStack spacing={2}>
             <Icon as={FiUsers} color="gray.500" boxSize={3.5} />
-            <Text><strong>{user.followers}</strong> {t("profile.followers")}</Text>
+            <Text fontFamily="Inter, sans-serif" fontWeight="400">{user.followers} {t("profile.followers")}</Text>
           </HStack>
           <HStack spacing={2}>
             <Icon as={FiHeart} color="gray.500" boxSize={3.5} />
-            <Text><strong>{user.following}</strong> {t("profile.following")}</Text>
+            <Text fontFamily="Inter, sans-serif" fontWeight="400">{user.following} {t("profile.following")}</Text>
           </HStack>
         </VStack>
 
@@ -99,7 +99,7 @@ export default function UserProfile({ user }: UserProfileProps) {
               spacing={2}
               cursor="pointer"
               onClick={() => openUrl(user.blog!)}
-              _hover={{ color: "brand.blue" }}
+              _hover={{ color: "brand.purple" }}
             >
               <Icon as={FiLink} color="gray.500" boxSize={3.5} />
               <Text>{user.blog}</Text>
@@ -110,7 +110,7 @@ export default function UserProfile({ user }: UserProfileProps) {
               spacing={2}
               cursor="pointer"
               onClick={() => openUrl(`https://twitter.com/${user.twitter_username}`)}
-              _hover={{ color: "brand.blue" }}
+              _hover={{ color: "brand.purple" }}
             >
               <Icon as={FiTwitter} color="gray.500" boxSize={3.5} />
               <Text>@{user.twitter_username}</Text>
