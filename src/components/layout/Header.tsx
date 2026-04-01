@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export default function Header() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
 
@@ -25,6 +25,10 @@ export default function Header() {
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") handleSearch();
+  };
+
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === "pt" ? "en" : "pt");
   };
 
   return (
@@ -66,6 +70,18 @@ export default function Header() {
             borderRadius="md"
           >
             {t("search.button")}
+          </Button>
+          <Button
+            onClick={toggleLanguage}
+            variant="outline"
+            borderColor="brand.purple"
+            color="brand.purple"
+            size="md"
+            fontWeight="normal"
+            _hover={{ bg: "purple.50" }}
+            borderRadius="md"
+          >
+            {i18n.language === "pt" ? "EN" : "PT"}
           </Button>
         </HStack>
       </HStack>
