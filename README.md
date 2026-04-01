@@ -101,7 +101,7 @@ src/
 
 ## Demo
 
-[Ver no Vercel](#) ← _em breve_
+[Ver no Vercel](https://eturcodev-petize-challenge.vercel.app/)
 
 ---
 
@@ -210,4 +210,4 @@ src/
 
 ## Live Demo
 
-[View on Vercel](#) ← _coming soon_
+[View on Vercel](https://eturcodev-petize-challenge.vercel.app/)
