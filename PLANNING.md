@@ -16,25 +16,25 @@ Construir uma aplicação React que busque o perfil de desenvolvedores na API p�
 ## Histórias de Usuário — Checklist
 
 ### Requisitos funcionais
-- [ ] Todas as telas devem ser responsivas (desktop e mobile)
-- [ ] Na home, buscar usuário do GitHub por username e exibir dados na página de perfil
-- [ ] Exibir mensagem informativa quando o username não for encontrado
-- [ ] Na página de perfil, listar repositórios com scroll infinito (10 por página)
-- [ ] Listagem de repositórios com opção de ordenação por todos os parâmetros da API do GitHub
-- [ ] O componente de ordenação não está no Figma — deve ser criado seguindo o estilo visual existente
-- [ ] Nomes dos repositórios devem ser links para o repositório original no GitHub
-- [ ] Se o usuário tiver site no perfil, exibir botão que abre o site
-- [ ] Se o usuário tiver Twitter no perfil, exibir botão que abre o Twitter
+- [x] Todas as telas devem ser responsivas (desktop e mobile)
+- [x] Na home, buscar usuário do GitHub por username e exibir dados na página de perfil
+- [x] Exibir mensagem informativa quando o username não for encontrado
+- [x] Na página de perfil, listar repositórios com scroll infinito (10 por página)
+- [x] Listagem de repositórios com opção de ordenação por todos os parâmetros da API do GitHub
+- [x] O componente de ordenação não está no Figma — deve ser criado seguindo o estilo visual existente
+- [x] Nomes dos repositórios devem ser links para o repositório original no GitHub
+- [x] Se o usuário tiver site no perfil, exibir botão que abre o site
+- [x] Se o usuário tiver Twitter no perfil, exibir botão que abre o Twitter
 
 ### Requisitos técnicos
-- [ ] Framework: React
-- [ ] Biblioteca de UI: Chakra UI v2
-- [ ] Código escrito em inglês
-- [ ] Internacionalização com i18next — Português e Inglês
-- [ ] Duas rotas: `/` (home) e `/profile/:username` (enviável como link)
-- [ ] Entidades User e Repository modeladas com Zod
-- [ ] Repositório público no GitHub
-- [ ] Deploy na Vercel ou GitHub Pages (diferencial)
+- [x] Framework: React
+- [x] Biblioteca de UI: Chakra UI v2
+- [x] Código escrito em inglês
+- [x] Internacionalização com i18next — Português e Inglês
+- [x] Duas rotas: `/` (home) e `/profile/:username` (enviável como link)
+- [x] Entidades User e Repository modeladas com Zod
+- [x] Repositório público no GitHub
+- [x] Deploy na Vercel ou GitHub Pages (diferencial)
 
 ---
 
@@ -162,25 +162,25 @@ Build a React application that searches GitHub developer profiles via the public
 ## User Stories — Checklist
 
 ### Functional requirements
-- [ ] All screens must be responsive (desktop and mobile)
-- [ ] On the home page, search a GitHub user by username and display their data on the profile page
-- [ ] When a username is not found, show an informative message
-- [ ] On the profile page, list repositories with infinite scroll (10 per page)
-- [ ] Repository list must have a sort option supporting all parameters allowed by the GitHub API
-- [ ] The sort component is not in the Figma prototype — must be created following the existing visual style
-- [ ] Repository names must be links to the original GitHub repository
-- [ ] If the user has a website in their profile, show a button that opens it
-- [ ] If the user has a Twitter account in their profile, show a button that opens it
+- [x] All screens must be responsive (desktop and mobile)
+- [x] On the home page, search a GitHub user by username and display their data on the profile page
+- [x] When a username is not found, show an informative message
+- [x] On the profile page, list repositories with infinite scroll (10 per page)
+- [x] Repository list must have a sort option supporting all parameters allowed by the GitHub API
+- [x] The sort component is not in the Figma prototype — must be created following the existing visual style
+- [x] Repository names must be links to the original GitHub repository
+- [x] If the user has a website in their profile, show a button that opens it
+- [x] If the user has a Twitter account in their profile, show a button that opens it
 
 ### Technical requirements
-- [ ] Framework: React
-- [ ] UI library: Chakra UI v2
-- [ ] Code written in English
-- [ ] Internationalization with i18next — Portuguese and English
-- [ ] Two routes: `/` (home) and `/profile/:username` (shareable link)
-- [ ] Entities (User and Repository) modeled with Zod
-- [ ] Public GitHub repository
-- [ ] Deploy on Vercel or GitHub Pages (differential)
+- [x] Framework: React
+- [x] UI library: Chakra UI v2
+- [x] Code written in English
+- [x] Internationalization with i18next — Portuguese and English
+- [x] Two routes: `/` (home) and `/profile/:username` (shareable link)
+- [x] Entities (User and Repository) modeled with Zod
+- [x] Public GitHub repository
+- [x] Deploy on Vercel or GitHub Pages (differential)
 
 ---
 
