@@ -32,7 +32,12 @@ export default function Profile() {
     <Box minH="100vh">
       <Header />
 
-      <Box maxW="1100px" mx="auto" px={6} py={8}>
+      <Box
+        maxW="1100px"
+        mx="auto"
+        px={{ base: 4, md: 6 }}
+        py={{ base: 4, md: 8 }}
+      >
         {userLoading && (
           <Center mt={20}>
             <Spinner size="xl" color="brand.purple" />
@@ -56,10 +61,14 @@ export default function Profile() {
         )}
 
         {user && (
-          <Flex gap={8} flexDirection={{ base: "column", md: "row" }}>
+          <Flex
+            gap={{ base: 6, md: 8 }}
+            flexDirection={{ base: "column", md: "row" }}
+            w="100%"
+          >
             <UserProfile user={user} />
 
-            <Box flex={1}>
+            <Box flex={1} minW={0}>
               <RepositorySort value={sort} onChange={handleSortChange} />
 
               {reposError && (
