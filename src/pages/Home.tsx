@@ -30,26 +30,30 @@ export default function Home() {
   return (
     <Box
       minH="100vh"
+      bg="#FCFCFC"
       display="flex"
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      gap={6}
+      pt="8vh"
+      pb="4vh"
       px={{ base: 4, md: 8 }}
     >
       <Text
-        fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
-        fontWeight="normal"
+        fontSize={{ base: "4xl", sm: "5xl", md: "6xl" }}
+        fontWeight="semibold"
         textAlign="center"
         whiteSpace="nowrap"
+        mb={4}
+        fontFamily="Nunito, sans-serif"
       >
         <Box as="span" color="brand.blue">Search </Box>
         <Box as="span" color="brand.purple">d_evs</Box>
       </Text>
 
-      <HStack maxW="500px" w="100%" spacing={2}>
-        <InputGroup size="md" flex={1}>
-          <InputLeftElement pointerEvents="none">
+      <HStack maxW="600px" w="100%" spacing={7} mt={7}>
+        <InputGroup flex={1}>
+          <InputLeftElement pointerEvents="none" h="100%">
             <SearchIcon color="gray.400" />
           </InputLeftElement>
           <Input
@@ -58,8 +62,10 @@ export default function Home() {
             onKeyDown={handleKeyDown}
             placeholder={t("search.placeholder")}
             focusBorderColor="brand.purple"
-            borderRadius="md"
+            borderRadius="lg"
             fontWeight="normal"
+            h="40px"
+            fontSize="md"
           />
         </InputGroup>
 
@@ -67,12 +73,14 @@ export default function Home() {
           onClick={handleSearch}
           bg="brand.purple"
           color="white"
-          size="md"
-          px={{ base: 4, md: 10 }}
+          h="40px"
+          minW={{ base: "120px", md: "150px" }}
+          px={{ base: 4, md: 8 }}
           fontWeight="normal"
-          _hover={{ bg: "#6a28a8" }}
+          _hover={{ bg: "#8C19D2" }}
           borderRadius="md"
           flexShrink={0}
+          fontSize="md"
         >
           {t("search.button")}
         </Button>

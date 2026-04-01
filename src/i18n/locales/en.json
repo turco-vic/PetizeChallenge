@@ -19,6 +19,15 @@
     }
   },
   "repo": {
-    "updatedAt": "Updated"
+    "updatedAt": "Updated",
+    "updatedToday": "Updated today",
+    "updatedAgoDays_one": "Updated {{count}} day ago",
+    "updatedAgoDays_other": "Updated {{count}} days ago",
+    "updatedAgoWeeks_one": "Updated {{count}} week ago",
+    "updatedAgoWeeks_other": "Updated {{count}} weeks ago",
+    "updatedAgoMonths_one": "Updated {{count}} month ago",
+    "updatedAgoMonths_other": "Updated {{count}} months ago",
+    "updatedAgoYears_one": "Updated {{count}} year ago",
+    "updatedAgoYears_other": "Updated {{count}} years ago"
   }
 }

@@ -19,6 +19,15 @@
     }
   },
   "repo": {
-    "updatedAt": "Atualizado"
+    "updatedAt": "Atualizado",
+    "updatedToday": "Atualizado hoje",
+    "updatedAgoDays_one": "Atualizado há {{count}} dia",
+    "updatedAgoDays_other": "Atualizado há {{count}} dias",
+    "updatedAgoWeeks_one": "Atualizado há {{count}} semana",
+    "updatedAgoWeeks_other": "Atualizado há {{count}} semanas",
+    "updatedAgoMonths_one": "Atualizado há {{count}} mês",
+    "updatedAgoMonths_other": "Atualizado há {{count}} meses",
+    "updatedAgoYears_one": "Atualizado há {{count}} ano",
+    "updatedAgoYears_other": "Atualizado há {{count}} anos"
   }
 }

@@ -33,22 +33,84 @@ export default function Header() {
   };
 
   return (
-    <Box px={{ base: 4, md: 8 }} py={4} bg="white">
-      {/* Desktop */}
-      <HStack justify="space-between" display={{ base: "none", md: "flex" }}>
-        <Text
-          fontSize="xl"
-          fontWeight="normal"
-          cursor="pointer"
-          onClick={() => navigate("/")}
-        >
-          <Box as="span" color="brand.blue">Search </Box>
-          <Box as="span" color="brand.purple">d_evs</Box>
-        </Text>
+    <Box py={4}>
+      <Box maxW="1100px" mx="auto" px={{ base: 4, md: 6 }}>
+        {/* Desktop */}
+        <HStack spacing={8} align="center" display={{ base: "none", md: "flex" }}>
+          <Box w="220px" flexShrink={0}>
+            <Text
+              fontSize="3xl"
+              fontWeight="semibold"
+              cursor="pointer"
+              fontFamily="Nunito, sans-serif"
+              onClick={() => navigate("/")}
+            >
+              <Box as="span" color="brand.blue">Search </Box>
+              <Box as="span" color="brand.purple">d_evs</Box>
+            </Text>
+          </Box>
 
-        <HStack spacing={3}>
-          <InputGroup size="md" w="300px">
-            <InputLeftElement pointerEvents="none">
+          <HStack flex={1} justify="space-between" align="center">
+            <InputGroup w="520px">
+              <InputLeftElement pointerEvents="none" h="100%">
+                <SearchIcon color="gray.400" />
+              </InputLeftElement>
+              <Input
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                onKeyDown={handleKeyDown}
+                placeholder={t("search.placeholder")}
+                focusBorderColor="brand.purple"
+                borderRadius="lg"
+                fontWeight="normal"
+                h="42px"
+              />
+            </InputGroup>
+
+            <Button
+              onClick={toggleLanguage}
+              variant="outline"
+              borderColor="brand.purple"
+              color="brand.purple"
+              size="md"
+              fontWeight="normal"
+              _hover={{ bg: "#8C19D2", color: "white" }}
+              borderRadius="md"
+            >
+              {i18n.language === "pt" ? "EN" : "PT"}
+            </Button>
+          </HStack>
+        </HStack>
+
+        {/* Mobile */}
+        <VStack display={{ base: "flex", md: "none" }} spacing={3} align="stretch">
+          <HStack justify="space-between">
+            <Text
+              fontSize="3xl"
+              fontWeight="semibold"
+              cursor="pointer"
+              fontFamily="Nunito, sans-serif"
+              onClick={() => navigate("/")}
+            >
+              <Box as="span" color="brand.blue">Search </Box>
+              <Box as="span" color="brand.purple">d_evs</Box>
+            </Text>
+            <Button
+              onClick={toggleLanguage}
+              variant="outline"
+              borderColor="brand.purple"
+              color="brand.purple"
+              size="sm"
+              fontWeight="normal"
+              _hover={{ bg: "#8C19D2", color: "white" }}
+              borderRadius="md"
+            >
+              {i18n.language === "pt" ? "EN" : "PT"}
+            </Button>
+          </HStack>
+
+          <InputGroup>
+            <InputLeftElement pointerEvents="none" h="100%">
               <SearchIcon color="gray.400" />
             </InputLeftElement>
             <Input
@@ -57,92 +119,13 @@ export default function Header() {
               onKeyDown={handleKeyDown}
               placeholder={t("search.placeholder")}
               focusBorderColor="brand.purple"
-              borderRadius="md"
+              borderRadius="lg"
               fontWeight="normal"
+              h="42px"
             />
           </InputGroup>
-          <Button
-            onClick={handleSearch}
-            bg="brand.purple"
-            color="white"
-            size="md"
-            px={8}
-            fontWeight="normal"
-            _hover={{ bg: "#6a28a8" }}
-            borderRadius="md"
-          >
-            {t("search.button")}
-          </Button>
-          <Button
-            onClick={toggleLanguage}
-            variant="outline"
-            borderColor="brand.purple"
-            color="brand.purple"
-            size="md"
-            fontWeight="normal"
-            _hover={{ bg: "purple.50" }}
-            borderRadius="md"
-          >
-            {i18n.language === "pt" ? "EN" : "PT"}
-          </Button>
-        </HStack>
-      </HStack>
-
-      {/* Mobile */}
-      <VStack display={{ base: "flex", md: "none" }} spacing={3} align="stretch">
-        <HStack justify="space-between">
-          <Text
-            fontSize="xl"
-            fontWeight="normal"
-            cursor="pointer"
-            onClick={() => navigate("/")}
-          >
-            <Box as="span" color="brand.blue">Search </Box>
-            <Box as="span" color="brand.purple">d_evs</Box>
-          </Text>
-          <Button
-            onClick={toggleLanguage}
-            variant="outline"
-            borderColor="brand.purple"
-            color="brand.purple"
-            size="sm"
-            fontWeight="normal"
-            _hover={{ bg: "purple.50" }}
-            borderRadius="md"
-          >
-            {i18n.language === "pt" ? "EN" : "PT"}
-          </Button>
-        </HStack>
-
-        <HStack spacing={2}>
-          <InputGroup size="md" flex={1}>
-            <InputLeftElement pointerEvents="none">
-              <SearchIcon color="gray.400" />
-            </InputLeftElement>
-            <Input
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              onKeyDown={handleKeyDown}
-              placeholder={t("search.placeholder")}
-              focusBorderColor="brand.purple"
-              borderRadius="md"
-              fontWeight="normal"
-            />
-          </InputGroup>
-          <Button
-            onClick={handleSearch}
-            bg="brand.purple"
-            color="white"
-            size="md"
-            px={6}
-            fontWeight="normal"
-            _hover={{ bg: "#6a28a8" }}
-            borderRadius="md"
-          >
-            {t("search.button")}
-          </Button>
-        </HStack>
-      </VStack>
+        </VStack>
+      </Box>
     </Box>
   );
 }

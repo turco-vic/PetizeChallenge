@@ -29,14 +29,17 @@ export default function Profile() {
   };
 
   return (
-    <Box minH="100vh">
+    <Box minH="100vh" bg="#FCFCFC" overflowX="hidden">
       <Header />
 
       <Box
         maxW="1100px"
         mx="auto"
         px={{ base: 4, md: 6 }}
-        py={{ base: 4, md: 8 }}
+        pt={{ base: 14, md: 24 }}
+        pb={{ base: 4, md: 8 }}
+        w="100%"
+        minW={0}
       >
         {userLoading && (
           <Center mt={20}>
@@ -68,7 +71,7 @@ export default function Profile() {
           >
             <UserProfile user={user} />
 
-            <Box flex={1} minW={0}>
+            <Box flex={1} minW={0} w="100%" bg="#FFFFFF">
               <RepositorySort value={sort} onChange={handleSortChange} />
 
               {reposError && (

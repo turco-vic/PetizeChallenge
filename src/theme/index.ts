@@ -3,13 +3,13 @@ import { extendTheme } from "@chakra-ui/react";
 const theme = extendTheme({
   colors: {
     brand: {
-      purple: "#7B2FBE",
-      blue: "#4A90D9",
+      purple: "#8C19D2",
+      blue: "#2F6FB2",
     },
   },
   fonts: {
-    heading: "Inter, sans-serif",
-    body: "Inter, sans-serif",
+    heading: "Nunito, sans-serif",
+    body: "Nunito, sans-serif",
   },
   components: {
     Button: {
@@ -17,7 +17,7 @@ const theme = extendTheme({
         primary: {
           bg: "brand.purple",
           color: "white",
-          _hover: { bg: "#6a28a8" },
+          _hover: { bg: "#8C19D2" },
         },
       },
     },
