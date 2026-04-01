@@ -74,8 +74,8 @@ Construir uma aplicação React que busque o perfil de desenvolvedores na API p�
 - [x] `Profile.tsx` — monta Header, UserProfile, RepositorySort, lista de RepositoryCard + sentinel
 
 ### Fase 7 — i18n
-- [ ] Substituir todas as strings hardcoded pelo hook `useTranslation()`
-- [ ] Testar alternância PT → EN
+- [x] Substituir todas as strings hardcoded pelo hook `useTranslation()`
+- [x] Testar alternância PT → EN
 
 ### Fase 8 — Polimento e Deploy
 - [ ] Tratar todos os estados de UI: loading, erro, vazio, usuário não encontrado
@@ -220,8 +220,8 @@ Build a React application that searches GitHub developer profiles via the public
 - [x] `Profile.tsx` — assembles Header, UserProfile, RepositorySort, RepositoryCard list + sentinel
 
 ### Phase 7 — i18n
-- [ ] Replace all hardcoded strings with `useTranslation()` hook
-- [ ] Test PT → EN switching
+- [x] Replace all hardcoded strings with `useTranslation()` hook
+- [x] Test PT → EN switching
 
 ### Phase 8 — Polish & Deploy
 - [ ] Handle all UI states: loading, error, empty, user not found
