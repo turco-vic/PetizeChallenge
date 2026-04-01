@@ -71,7 +71,14 @@ export default function Profile() {
           >
             <UserProfile user={user} />
 
-            <Box flex={1} minW={0} w="100%" bg="#FFFFFF">
+            <Box
+              flex={1}
+              minW={0}
+              w="100%"
+              bg="#FFFFFF"
+              px={{ base: 3, md: 4 }}
+              borderRadius="lg"
+            >
               <RepositorySort value={sort} onChange={handleSortChange} />
 
               {reposError && (

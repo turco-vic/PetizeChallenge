@@ -33,7 +33,7 @@ export default function UserProfile({ user }: UserProfileProps) {
 
   return (
     <Box w={{ base: "100%", md: "220px" }} flexShrink={0}>
-      <Box bg="#FFFFFF">
+      <Box bg="#FFFFFF" px={{ base: 3, md: 4 }} borderRadius="lg">
         <VStack align="start" spacing={2}>
 
         <HStack spacing={3} align="center">
