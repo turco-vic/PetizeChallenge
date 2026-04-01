@@ -223,4 +223,3 @@ src/
 ├── theme/             # Chakra UI custom theme
 └── types/             # TypeScript types inferred from Zod schemas
 ```
-```
